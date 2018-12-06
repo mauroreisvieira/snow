@@ -1,0 +1,23 @@
+{
+  "name": "paul-lewis-snow",
+  "version": "1.0.0",
+  "description": "Implementation of Paul Lewis Canvas video.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mauroreisvieira/snow.git"
+  },
+  "keywords": [
+    "canvas"
+  ],
+  "author": "Mauro Reis Vieira <mauroreisvieira@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mauroreisvieira/snow/issues"
+  },
+  "homepage": "https://github.com/mauroreisvieira/snow#readme"
+}
