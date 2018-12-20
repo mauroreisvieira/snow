@@ -1,8 +1,10 @@
-# ☃ Snow
+# ☃️ Snow
 
 Implementation of Paul Lewis Canvas video.
 
 [![❄️ Let's make some SNOW!](https://img.youtube.com/vi/VW8qoyYzWGg/0.jpg)](https://www.youtube.com/watch?v=VW8qoyYzWGg)
+
+**See the demo:** [Canvas Snow](https://mauroreisvieira.github.io/snow/)
 
 ### ⚗️ Technology Used:
    - HTML
