@@ -11,7 +11,6 @@ class Flake {
     }
 
     reset () {
-        console.log('Reset');
         this.x = this.randBetween(0, window.innerWidth);
         this.y = this.randBetween(0, -window.innerHeight);
         this.vx = this.randBetween(-3, 3);
@@ -53,6 +52,20 @@ class Snow {
         this.height = window.innerHeight;
         this.canvas.width = this.width;
         this.canvas.height = this.height;
+
+        this.createVignette();
+    }
+
+    createVignette() {
+        const xMid = this.width * 0.5;
+        const yMid = this.height * 0.5;
+        const radius = Math.sqrt(xMid * xMid + yMid * yMid);
+        this.vignette = this.ctx.createRadialGradient(xMid, yMid, 0, xMid, yMid, radius);
+
+        for (let i = 0; i <= 1; i += 0.1) {
+            const alpha = Math.pow(i, 3);
+            this.vignette.addColorStop(0.5 + i * 0.5, `rgba(30, 30, 30, ${alpha})`);
+        }
     }
 
     createFlakes() {
@@ -77,6 +90,9 @@ class Snow {
             this.ctx.fill();
             this.ctx.restore();
         }
+
+        this.ctx.fillStyle = this.vignette;
+        this.ctx.fillRect(0, 0, this.width, this.height);
         requestAnimationFrame(this.updateBound);
     }
 }
